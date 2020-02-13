@@ -1,0 +1,15 @@
+{
+  "name": "muhammad_umar_537_assignment",
+  "version": "1.0.0",
+  "description": "VentureDive Training Assignment",
+  "main": "app.js",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UmarVD",
+  "license": "ISC"
+}
