@@ -4,7 +4,12 @@
   "description": "VentureDive Training Assignment",
   "main": "app.js",
   "dependencies": {
-    "nodemon": "^2.0.2"
+    "http-debug": "^0.1.2",
+    "httpdispatcher": "^2.1.2",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
+    "request-debug": "^0.2.0",
+    "router": "^1.3.4"
   },
   "devDependencies": {},
   "scripts": {
