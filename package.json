@@ -4,6 +4,7 @@
   "description": "VentureDive Training Assignment",
   "main": "app.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "http-debug": "^0.1.2",
     "httpdispatcher": "^2.1.2",
     "nodemon": "^2.0.2",

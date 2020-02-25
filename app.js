@@ -1,26 +1,23 @@
-// const http = require("http");
-const http = require("http");
-const httpDispatcher = require("httpdispatcher");
-const { getFileName, readFile } = require("./utils/helpers");
+const axios = require("axios");
 
-const dispatcher = new httpDispatcher();
+const request = "The Phantom Menace";
 
-const logger = (request, response) => {
-  try {
-    console.log(request.url);
-    dispatcher.dispatch(request, response);
-  } catch (err) {
-    console.log(err);
-  }
-};
+function searchMovies(movies, request) {
+  return movies.filter(movie => movie.title === request);
+}
 
-const server = http.createServer(logger);
+async function getMovies() {
+  const url = "https://swapi.co/api/films/";
+  axios
+    .get(url)
+    .then(res => {
+      const movies = res.data.results;
+      const filteredMovies = searchMovies(movies, request);
+      console.log(filteredMovies);
+    })
+    .catch(e => {
+      console.log(e.statusText);
+    });
+}
 
-dispatcher.onGet("/", async function(req, res) {
-  res.writeHead(200, { "Content-Type": "text/html" });
-  var fileName = await getFileName(".txt");
-  var text = readFile(`${fileName}`);
-  res.end(text);
-});
-
-server.listen(8000);
+getMovies();
