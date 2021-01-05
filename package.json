@@ -4,7 +4,7 @@
   "description": "VentureDive Training Assignment",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "http-debug": "^0.1.2",
     "httpdispatcher": "^2.1.2",
